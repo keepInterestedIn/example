@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>sshTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Struts2 -->
+  <filter>
+  	<filter-name>struts2</filter-name>
+  	<!-- 新版本都用这个和FilterDispatcher有区别 -->
+  	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>	
+  </filter>
+  <filter-mapping>
+  	<filter-name>struts2</filter-name>	<!-- 必须要和前面的filter-name的值一一对应 -->
+  	<url-pattern>/*</url-pattern>	<!-- 过滤所有的请求 -->
+  </filter-mapping>
+</web-app>

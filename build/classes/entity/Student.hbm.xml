@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity">
+	<class name="Student" table="studentTable">
+		<!-- 主键属性 -->
+		<id name="id" column="ID" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" type="java.lang.String">	
+			<column name="NAME" length="20" not-null="true" />
+		</property>
+		<property name="sex" type="java.lang.String">
+			<column name="SEX" length="20" not-null="true" />
+		</property>
+		<property name="age" type="java.lang.String">
+			<column name="AGE" length="20" not-null="true" />
+		</property>
+		<property name="birthday" type="java.lang.String">
+			<column name="BIRTHDAY" length="20" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
