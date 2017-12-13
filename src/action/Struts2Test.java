@@ -28,4 +28,6 @@ public class Struts2Test extends ActionSupport {
 		this.url = url;
 	}
 
+	
+	
 }
