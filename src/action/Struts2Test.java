@@ -1,6 +1,5 @@
 package action;
 
-
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -14,7 +13,7 @@ public class Struts2Test extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-		//获取应用的上文路径
+		// 获取应用的上文路径
 		String chartURL = ServletActionContext.getServletContext().getContextPath();
 		url = chartURL + "/" + createChart.getChartPath();
 		return "success";
@@ -28,6 +27,4 @@ public class Struts2Test extends ActionSupport {
 		this.url = url;
 	}
 
-	
-	
 }
